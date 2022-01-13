@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "corsheaders",
     # local apps
     'api.apps.ApiConfig',
-    'frontend.apps.FrontendConfig',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
