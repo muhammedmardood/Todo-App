@@ -5,6 +5,19 @@ from rest_framework import status
 from .models import *
 from .serializers import *
 
+current_url = "http://127.0.0.1:8000/api/"
+
+
+@api_view(['GET'])
+def main(request):
+    api_urls = {
+        'List and Create Tasks': current_url+'task-list/',
+        'Get Details and Update a Task': current_url+'task/TASK_ID/',
+        'Delete a Task': current_url+'task/delete/TASK_ID/',
+    }
+
+    return Response(api_urls)
+
 
 @api_view(["GET", "POST"])
 def taskList(request):
